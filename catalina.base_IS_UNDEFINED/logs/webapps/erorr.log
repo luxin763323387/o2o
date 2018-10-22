@@ -1,0 +1,3 @@
+2018-10-18 08:59:31.190 [main] ERROR com.cn.lx.util.ImageUtil - java.io.FileNotFoundException: D:\Image\win\upload\item\shop\25\2018101808593013497.jpg (系统找不到指定的路径。)
+2018-10-18 09:04:02.721 [main] ERROR com.cn.lx.util.ImageUtil - java.io.FileNotFoundException: D:\Image\win\upload\item\shop\26\2018101809040214234.jpg (系统找不到指定的路径。)
+2018-10-18 09:14:12.720 [main] ERROR com.cn.lx.util.ImageUtil - java.io.FileNotFoundException: D:\Image\win\upload\item\shop\27\2018101809141215368.jpg (系统找不到指定的路径。)

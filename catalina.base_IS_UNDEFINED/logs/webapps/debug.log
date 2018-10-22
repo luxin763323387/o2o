@@ -1,0 +1,8 @@
+2018-10-21 00:20:40.380 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-10-21 00:20:40.474 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 3(Integer), 1(Long), 测试店铺(String), test(String), test(String), test(String), null, null, 2018-10-21 00:20:40.333(Timestamp), 2018-10-21 00:20:40.333(Timestamp), 0(Integer), 审核中(String)
+2018-10-21 00:20:40.567 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - <==    Updates: 1
+2018-10-21 00:20:40.614 [main] DEBUG com.cn.lx.util.ImageUtil - current relativeAddr is:upload\item\shop\29\2018102100204013907.jpg
+2018-10-21 00:20:40.614 [main] DEBUG com.cn.lx.util.ImageUtil - current complete addr is:D:\Image\win\upload\item\shop\29\2018102100204013907.jpg
+2018-10-21 00:20:41.692 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-10-21 00:20:41.692 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==> Parameters: 测试店铺(String), test(String), test(String), test(String), upload\item\shop\29\2018102100204013907.jpg(String), 2018-10-21 00:20:40.333(Timestamp), 0(Integer), 审核中(String), 3(Integer), 1(Long), 29(Long)
+2018-10-21 00:20:41.739 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - <==    Updates: 1
