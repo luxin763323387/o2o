@@ -2,10 +2,14 @@ package com.cn.lx.web.Shopadmin;
 
 
 import com.cn.lx.dto.ShopExecution;
+import com.cn.lx.entity.Area;
 import com.cn.lx.entity.PersonInfo;
 import com.cn.lx.entity.Shop;
+import com.cn.lx.entity.ShopCategory;
 import com.cn.lx.enums.ShopStateEnum;
 import com.cn.lx.exceptions.ShopOperationException;
+import com.cn.lx.service.AreaService;
+import com.cn.lx.service.ShopCategoryService;
 import com.cn.lx.service.ShopService;
 import com.cn.lx.util.HttpServletRequestUtil;
 import com.cn.lx.util.ImageUtil;
@@ -23,7 +27,9 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -36,6 +42,29 @@ import java.util.Map;
 public class ShopManagementController {
     @Autowired
     private ShopService shopService;
+    @Autowired
+    private ShopCategoryService shopCategoryService;
+    @Autowired
+    private AreaService areaService;
+
+    @RequestMapping(value = "/getshopinitinfo",method = RequestMethod.GET)
+    @ResponseBody
+    private Map<String,Object> getShopInitInfo(){
+        Map<String,Object> modelMap = new HashMap<String,Object>();
+        List<ShopCategory> shopCategoryList = new ArrayList<ShopCategory>();
+        List<Area> areaList = new ArrayList<Area>();
+        try{
+            shopCategoryList = shopCategoryService.getShopCategoryList(new ShopCategory());
+            areaList = areaService.getAreaList();
+            modelMap.put("shopCategoryList",shopCategoryList);
+            modelMap.put("areaList",areaList);
+            modelMap.put("success",true);
+        }catch (Exception e){
+            modelMap.put("success",false);
+            modelMap.put("errMsg",e.getMessage());
+        }
+        return modelMap;
+    }
 
     @RequestMapping(value = "registershop",method = RequestMethod.POST)
     @ResponseBody

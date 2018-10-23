@@ -27,7 +27,7 @@ public class ShopCategoryDaoTest extends BaseTest {
         parentCategory.setShopCategoryId(1L);
         testCategory.setParent(parentCategory);
         shopCategoryList = shopCategoryDao.queryShopCategory(testCategory);
-        assertEquals(1,shopCategoryList.size());
+        assertEquals(2,shopCategoryList.size());
         System.out.println(shopCategoryList.get(0).getShopCategoryName());
     }
 
