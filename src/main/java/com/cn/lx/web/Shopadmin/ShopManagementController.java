@@ -5,6 +5,7 @@ import com.cn.lx.dto.ShopExecution;
 import com.cn.lx.entity.PersonInfo;
 import com.cn.lx.entity.Shop;
 import com.cn.lx.enums.ShopStateEnum;
+import com.cn.lx.exceptions.ShopOperationException;
 import com.cn.lx.service.ShopService;
 import com.cn.lx.util.HttpServletRequestUtil;
 import com.cn.lx.util.ImageUtil;
@@ -74,29 +75,25 @@ public class ShopManagementController {
         //2.注册店铺
         if(shop != null && shopImg !=null){
             PersonInfo owner = new PersonInfo();
+            //Session TODO
             owner.setUserId(1L);
             shop.setOwner(owner);
-            File shopImgFile = new File(PathUtil.getImgBasePath()+ ImageUtil.getRandomFileName());
+            ShopExecution se = null;
             try {
-                shopImgFile.createNewFile();
+                se = shopService.addShop(shop,shopImg.getInputStream(),shopImg.getOriginalFilename());
+                if(se.getState() == ShopStateEnum.CHECK.getState()){
+                    modelMap.put("success",true);
+                }  else{
+                    modelMap.put("success",false);
+                    modelMap.put("errMsg",se.getStateInfo());
+                }
+            } catch(ShopOperationException e){
+                e.printStackTrace();
+                modelMap.put("success",false);
+                modelMap.put("errMsg",e.getMessage());
             } catch (IOException e) {
                 modelMap.put("success",false);
-                modelMap.put("errMsg","上传图片不能为空");
-                return modelMap;
-            }
-            try {
-                inputStreamToFile(shopImg.getInputStream(),shopImgFile);
-            } catch (IOException e) {
-                modelMap.put("success",false);
-                modelMap.put("errMsg","上传图片不能为空");
-                return modelMap;
-            }
-            ShopExecution se = shopService.addShop(shop,shopImgFile);
-            if(se.getState() == ShopStateEnum.CHECK.getState()){
-                modelMap.put("success",true);
-            }  else{
-                modelMap.put("success",false);
-                modelMap.put("errMsg",se.getStateInfo());
+                modelMap.put("errMsg",e.getMessage());
             }
             return modelMap;
         }else{
@@ -106,7 +103,7 @@ public class ShopManagementController {
         }
     }
 
-    private static void inputStreamToFile(InputStream ins, File file){
+   /* private static void inputStreamToFile(InputStream ins, File file){
         FileOutputStream os = null;
         try{
             os = new FileOutputStream(file);
@@ -129,5 +126,5 @@ public class ShopManagementController {
                 throw new RuntimeException("调用inputStreamToFile产生异常" + e.getMessage());
             }
         }
-    }
+    }*/
 }

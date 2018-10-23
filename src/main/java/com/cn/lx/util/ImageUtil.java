@@ -9,6 +9,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -46,15 +47,15 @@ public class ImageUtil {
 
     /**
      * 处理缩略图，并返回新生成图片的相对值路径
-     * @param thumbnail
+     * @param thumbnailInputStream
      * @param targetAddr
      * @return
      */
-    public static String generateThumbnail(File thumbnail,String targetAddr){
+    public static String generateThumbnail(InputStream thumbnailInputStream, String fileName,String targetAddr){
         // 获取不同的随机名
         String realFileName = getRandomFileName();
         // 获取文件的扩展名
-        String extension = getFileExtension(thumbnail);
+        String extension = getFileExtension(fileName);
         // 如果目标路径不存在，则自动创建
         makeDirPath(targetAddr);
         // 获取文件存储的相对路径(带文件名)
@@ -65,7 +66,7 @@ public class ImageUtil {
         logger.debug("current complete addr is:" + PathUtil.getImgBasePath() + relativeAddr);
         // 调用Thumbnails生成带有水印的图片
         try {
-            Thumbnails.of(thumbnail).size(200, 200)
+            Thumbnails.of(thumbnailInputStream).size(200, 200)
                     .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.25f)
                     .outputQuality(0.8f).toFile(dest);
         } catch (IOException e) {
@@ -95,12 +96,12 @@ public class ImageUtil {
 
     /**
      * 获取输入文件流的扩展名
-     * @param cFile
+     * @param fileName
      * @return
      */
-    private static String getFileExtension(File cFile) {
-        String originalFileName = cFile.getName();
-        return originalFileName.substring(originalFileName.lastIndexOf("."));
+    private static String getFileExtension(String fileName) {
+
+        return fileName.substring(fileName.lastIndexOf("."));
     }
 
     /**
