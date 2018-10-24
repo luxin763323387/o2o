@@ -58,8 +58,15 @@ $(function () {
         // 添加图片流进表单对象里
         formData.append('shopImg', shopImg);
         // 将shop json对象转成字符流保存至表单对象key为shopStr的的键值对里
-        formData.append('shopStr', JSON.stringify(shop))
-
+        formData.append('shopStr', JSON.stringify(shop));
+        // 验证码点击事件
+        var verifyCodeActual = $('#j_captcha').val();
+        if(!verifyCodeActual){    //如果为空
+            $.toast('请输入验证码');
+            return;
+        }
+        //不为空则传输
+        formData.append('verifyCodeActual',verifyCodeActual);
         $.ajax({
             url: registerShopUrl,
             type: 'POST',
@@ -73,6 +80,7 @@ $(function () {
                 } else {
                     $.toast('提交失败!' + data.errMsg);
                 }
+                $('#captcha_img').click();
             }
         });
     });

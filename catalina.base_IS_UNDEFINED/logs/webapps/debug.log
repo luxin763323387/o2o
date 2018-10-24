@@ -1,43 +1,48 @@
-2018-10-23 14:37:03.338 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category-id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id, FROM tb_shop_category ORDER BY priority desc 
-2018-10-23 14:37:03.455 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 14:38:27.543 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id, FROM tb_shop_category ORDER BY priority desc 
-2018-10-23 14:38:27.578 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 14:43:05.801 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority desc 
-2018-10-23 14:43:05.849 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 14:43:05.870 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-10-23 14:45:19.243 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority desc 
-2018-10-23 14:45:19.289 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 14:45:19.307 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-10-23 14:48:48.436 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority desc 
-2018-10-23 14:48:48.479 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 14:48:48.501 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-10-23 14:48:48.513 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id =? ORDER BY priority desc 
-2018-10-23 14:48:48.513 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-10-23 14:48:48.575 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-10-23 15:17:11.732 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority desc 
-2018-10-23 15:17:11.761 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 15:17:11.784 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-10-23 15:17:11.800 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id =? ORDER BY priority desc 
-2018-10-23 15:17:11.801 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-10-23 15:17:11.803 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-10-23 15:20:00.931 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority desc 
-2018-10-23 15:20:00.968 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 15:20:00.991 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-10-23 15:20:22.603 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority desc 
-2018-10-23 15:20:22.641 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 15:20:22.670 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-10-23 15:20:22.683 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id =? ORDER BY priority desc 
-2018-10-23 15:20:22.685 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-10-23 15:20:22.687 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-10-23 15:20:50.656 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority desc 
-2018-10-23 15:20:50.702 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 15:20:50.722 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-10-23 15:20:50.734 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id =? ORDER BY priority desc 
-2018-10-23 15:20:50.735 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-10-23 15:20:50.738 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-10-23 15:21:07.677 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority desc 
-2018-10-23 15:21:07.715 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-10-23 15:21:07.737 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
-2018-10-23 15:21:07.751 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id =? ORDER BY priority desc 
-2018-10-23 15:21:07.752 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
-2018-10-23 15:21:07.754 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
+2018-10-24 13:13:33.247 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-10-24 13:13:33.306 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 3(Integer), 1(Long), 测试店铺2(String), test(String), test(String), test(String), null, null, 2018-10-24 13:13:33.172(Timestamp), 2018-10-24 13:13:33.172(Timestamp), 0(Integer), 审核中(String)
+2018-10-24 13:13:33.308 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - <==    Updates: 1
+2018-10-24 13:13:33.317 [main] DEBUG com.cn.lx.util.ImageUtil - current relativeAddr is:upload\item\shop\38\2018102413133316443.jpg
+2018-10-24 13:13:33.317 [main] DEBUG com.cn.lx.util.ImageUtil - current complete addr is:D:\Image\win\upload\item\shop\38\2018102413133316443.jpg
+2018-10-24 13:13:33.678 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-10-24 13:13:33.680 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test(String), test(String), test(String), upload\item\shop\38\2018102413133316443.jpg(String), 2018-10-24 13:13:33.172(Timestamp), 0(Integer), 审核中(String), 3(Integer), 1(Long), 38(Long)
+2018-10-24 13:13:33.681 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - <==    Updates: 1
+2018-10-24 13:24:04.002 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-10-24 13:24:04.041 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 3(Integer), 1(Long), 测试店铺2(String), test(String), test(String), test(String), null, null, 2018-10-24 13:24:03.965(Timestamp), 2018-10-24 13:24:03.965(Timestamp), 0(Integer), 审核中(String)
+2018-10-24 13:24:04.044 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - <==    Updates: 1
+2018-10-24 13:24:04.053 [main] DEBUG com.cn.lx.util.ImageUtil - current relativeAddr is:upload\item\shop\41\2018102413240418034.jpg
+2018-10-24 13:24:04.053 [main] DEBUG com.cn.lx.util.ImageUtil - current complete addr is:D:\Image\win\upload\item\shop\41\2018102413240418034.jpg
+2018-10-24 13:24:04.391 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-10-24 13:24:04.392 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test(String), test(String), test(String), upload\item\shop\41\2018102413240418034.jpg(String), 2018-10-24 13:24:03.965(Timestamp), 0(Integer), 审核中(String), 3(Integer), 1(Long), 41(Long)
+2018-10-24 13:24:04.394 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - <==    Updates: 1
+2018-10-24 13:35:41.885 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-10-24 13:35:41.921 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 3(Integer), 1(Long), 测试店铺2(String), test(String), test(String), test(String), null, null, 2018-10-24 13:35:41.819(Timestamp), 2018-10-24 13:35:41.819(Timestamp), 0(Integer), 审核中(String)
+2018-10-24 13:35:41.924 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - <==    Updates: 1
+2018-10-24 13:35:41.933 [main] DEBUG com.cn.lx.util.ImageUtil - current relativeAddr is:\upload\item\shop\44\2018102413354113780.jpg
+2018-10-24 13:35:41.933 [main] DEBUG com.cn.lx.util.ImageUtil - current complete addr is:D:\Image\win\\upload\item\shop\44\2018102413354113780.jpg
+2018-10-24 13:35:42.245 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-10-24 13:35:42.246 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test(String), test(String), test(String), \upload\item\shop\44\2018102413354113780.jpg(String), 2018-10-24 13:35:41.819(Timestamp), 0(Integer), 审核中(String), 3(Integer), 1(Long), 44(Long)
+2018-10-24 13:35:42.248 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - <==    Updates: 1
+2018-10-24 13:36:05.253 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-10-24 13:36:05.311 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 3(Integer), 1(Long), 测试店铺2(String), test(String), test(String), test(String), null, null, 2018-10-24 13:36:05.22(Timestamp), 2018-10-24 13:36:05.22(Timestamp), 0(Integer), 审核中(String)
+2018-10-24 13:36:05.316 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - <==    Updates: 1
+2018-10-24 13:36:05.330 [main] DEBUG com.cn.lx.util.ImageUtil - current relativeAddr is:\upload\item\shop\45\2018102413360516920.jpg
+2018-10-24 13:36:05.330 [main] DEBUG com.cn.lx.util.ImageUtil - current complete addr is:D:\Image\win\\upload\item\shop\45\2018102413360516920.jpg
+2018-10-24 13:36:05.625 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-10-24 13:36:05.629 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test(String), test(String), test(String), \upload\item\shop\45\2018102413360516920.jpg(String), 2018-10-24 13:36:05.22(Timestamp), 0(Integer), 审核中(String), 3(Integer), 1(Long), 45(Long)
+2018-10-24 13:36:05.644 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - <==    Updates: 1
+2018-10-24 13:36:40.617 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-10-24 13:36:40.653 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 3(Integer), 1(Long), 测试店铺2(String), test(String), test(String), test(String), null, null, 2018-10-24 13:36:40.583(Timestamp), 2018-10-24 13:36:40.583(Timestamp), 0(Integer), 审核中(String)
+2018-10-24 13:36:40.656 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - <==    Updates: 1
+2018-10-24 13:36:40.665 [main] DEBUG com.cn.lx.util.ImageUtil - current relativeAddr is:\upload\item\shop\46\2018102413364013196.jpg
+2018-10-24 13:36:40.665 [main] DEBUG com.cn.lx.util.ImageUtil - current complete addr is:D:\Image\win\\upload\item\shop\46\2018102413364013196.jpg
+2018-10-24 13:36:41.039 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-10-24 13:36:41.040 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test(String), test(String), test(String), \upload\item\shop\46\2018102413364013196.jpg(String), 2018-10-24 13:36:40.583(Timestamp), 0(Integer), 审核中(String), 3(Integer), 1(Long), 46(Long)
+2018-10-24 13:36:41.041 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - <==    Updates: 1
+2018-10-24 14:37:45.300 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2018-10-24 14:37:45.337 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 3(Integer), 1(Long), 测试店铺2(String), test(String), test(String), test(String), null, null, 2018-10-24 14:37:45.246(Timestamp), 2018-10-24 14:37:45.246(Timestamp), 0(Integer), 审核中(String)
+2018-10-24 14:37:45.338 [main] DEBUG com.cn.lx.dao.ShopDao.insertShop - <==    Updates: 1
+2018-10-24 14:37:45.346 [main] DEBUG com.cn.lx.util.ImageUtil - current relativeAddr is:\upload\item\shop\61\2018102414374513315.jpg
+2018-10-24 14:37:45.347 [main] DEBUG com.cn.lx.util.ImageUtil - current complete addr is:D:\Image\win\upload\item\shop\61\2018102414374513315.jpg
+2018-10-24 14:37:45.628 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2018-10-24 14:37:45.630 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - ==> Parameters: 测试店铺2(String), test(String), test(String), test(String), \upload\item\shop\61\2018102414374513315.jpg(String), 2018-10-24 14:37:45.246(Timestamp), 0(Integer), 审核中(String), 3(Integer), 1(Long), 61(Long)
+2018-10-24 14:37:45.632 [main] DEBUG com.cn.lx.dao.ShopDao.updateShop - <==    Updates: 1

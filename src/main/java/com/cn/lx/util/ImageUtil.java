@@ -89,9 +89,9 @@ public class ImageUtil {
      * @return
      */
     public static String getRandomFileName() {
-        int rannumn = r.nextInt(8999) +10000;
+        int ranNum = r.nextInt(8999) +10000;
         String nowTimeStr = sDateFormat.format(new Date());
-        return nowTimeStr + rannumn;
+        return nowTimeStr + ranNum;
     }
 
     /**
@@ -113,7 +113,7 @@ public class ImageUtil {
         String realFileParentPath = PathUtil.getImgBasePath() + targetAddr;
         File dirPath = new File(realFileParentPath);
         if(!dirPath.exists()){
-            dirPath.mkdir();
+            dirPath.mkdirs();
         }
     }
     

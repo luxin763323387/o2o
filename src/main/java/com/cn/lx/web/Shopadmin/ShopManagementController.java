@@ -11,6 +11,7 @@ import com.cn.lx.exceptions.ShopOperationException;
 import com.cn.lx.service.AreaService;
 import com.cn.lx.service.ShopCategoryService;
 import com.cn.lx.service.ShopService;
+import com.cn.lx.util.CodeUtil;
 import com.cn.lx.util.HttpServletRequestUtil;
 import com.cn.lx.util.ImageUtil;
 import com.cn.lx.util.PathUtil;
@@ -70,6 +71,12 @@ public class ShopManagementController {
     @ResponseBody
     private Map<String,Object> registerShop(HttpServletRequest request){
         Map<String,Object> modelMap = new HashMap<String,Object>();
+        //引入验证码
+        if(!CodeUtil.checkVerifyCode(request)){
+            modelMap.put("success",false);
+            modelMap.put("errMsg","输入了错误的验证码");
+            return modelMap;
+        }
         //1.接受并转化相应的参数，包括店铺信息及图片信息
         /**
          * 获取前端的信息转换成实体类
@@ -107,7 +114,7 @@ public class ShopManagementController {
             //Session TODO
             owner.setUserId(1L);
             shop.setOwner(owner);
-            ShopExecution se = null;
+            ShopExecution se;
             try {
                 se = shopService.addShop(shop,shopImg.getInputStream(),shopImg.getOriginalFilename());
                 if(se.getState() == ShopStateEnum.CHECK.getState()){
