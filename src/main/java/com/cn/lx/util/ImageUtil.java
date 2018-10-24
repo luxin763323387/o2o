@@ -67,7 +67,7 @@ public class ImageUtil {
         // 调用Thumbnails生成带有水印的图片
         try {
             Thumbnails.of(thumbnailInputStream).size(200, 200)
-                    .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.25f)
+                    .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File("D:/Image/watermark.jpg")), 0.25f)
                     .outputQuality(0.8f).toFile(dest);
         } catch (IOException e) {
             logger.error(e.toString());
@@ -80,7 +80,7 @@ public class ImageUtil {
     public static void main(String[]args) throws IOException {
         // 调用Thumbnails生成带有水印的图片
         Thumbnails.of(new File("D:/Image/naicha.jpg"))
-        .size(200,200).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath+"/watermark.jpg")),
+        .size(200,200).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")),
                 0.25f).outputQuality(0.8f).toFile("D:/Image/naichanew.jpg");
     }
 

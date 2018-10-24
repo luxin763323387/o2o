@@ -8,6 +8,12 @@ import com.cn.lx.entity.Shop;
  */
 public interface ShopDao {
     /**
+     * 通过shopId查询
+     * @param shopId
+     * @return
+     */
+    Shop queryByShopId(Long shopId);
+    /**
      * 新增店铺
      * @param shop
      * @return

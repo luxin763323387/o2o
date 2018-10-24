@@ -21,6 +21,15 @@ public class ShopDaoTest extends BaseTest {
     @Autowired
     private ShopDao shopDao;
     @Test
+    public void testShopQueryByShopId(){
+        long shopId = 5L;
+        Shop shop = shopDao.queryByShopId(shopId);
+        System.out.println(shop);
+        System.out.println(shop.getArea().getAreaId());
+        System.out.println(shop.getArea().getAreaName());
+    }
+
+    @Test
     @Ignore
     public void testInsertShop(){
         Shop shop = new Shop();
@@ -46,6 +55,7 @@ public class ShopDaoTest extends BaseTest {
     }
 
     @Test
+    @Ignore
     public void testUpdateShop(){
         Shop shop = new Shop();
         shop.setShopId(5L);

@@ -75,7 +75,7 @@ $(function () {
             processData: false,
             cache: false,
             success: function (data) {
-                if (data.siccess) {
+                if (data.success) {
                     $.toast('提交成功!');
                 } else {
                     $.toast('提交失败!' + data.errMsg);
