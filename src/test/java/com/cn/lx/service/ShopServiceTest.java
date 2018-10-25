@@ -28,7 +28,9 @@ public class ShopServiceTest extends BaseTest {
    @Autowired
    private ShopService shopService;
 
+
     @Test
+    @Ignore
     public void testModifyShop()throws ShopOperationException,FileNotFoundException{
         Shop shop = new Shop();
         shop.setShopId(28L);

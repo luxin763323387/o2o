@@ -5,7 +5,7 @@
 <mapper namespace="com.cn.lx.dao.ShopDao">
 	<resultMap type="com.cn.lx.entity.Shop" id="shopMap">
 		<id column ="shop_id" property="shopId"/>
-		<result column="shop_shop" property="shopName"/>
+		<result column="shop_name" property="shopName"/>
 		<result column="shop_desc" property="shopDesc"/>
 		<result column="shop_addr" property="shopAddr"/>
 		<result column="phone" property="phone"/>
