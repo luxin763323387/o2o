@@ -42,7 +42,7 @@ public class ShopServiceTest extends BaseTest {
     }
 
     @Test
-    @Ignore
+
     public void testAddShop() throws FileNotFoundException {
         Shop shop = new Shop();
         PersonInfo owner = new PersonInfo();
