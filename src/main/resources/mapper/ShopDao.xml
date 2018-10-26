@@ -129,8 +129,9 @@
 		WHERE
 		s.area_id=a.area_id AND s.shop_category_id=sc.shop_category_id AND s.shop_id=#{shopId}
 	</select>
-    <insert id="insertShop" useGeneratedKeys="true" keyColumn="shop_Id" keyProperty="shopId">
-         INSERT INTO
+	<insert id="insertShop" useGeneratedKeys="true" keyColumn="shop_id"
+			keyProperty="shopId">
+		INSERT INTO
 		tb_shop(owner_id, area_id, shop_category_id,
 		shop_name, shop_desc, shop_addr,
 		phone, shop_img, priority,
@@ -140,7 +141,7 @@
 		(#{owner.userId},#{area.areaId},#{shopCategory.shopCategoryId},#{shopName},
 		#{shopDesc},#{shopAddr},#{phone},#{shopImg},#{priority},
 		#{createTime},#{lastEditTime}, #{enableStatus},#{advice})
-    </insert>
+	</insert>
 	<update id="updateShop" parameterType="com.cn.lx.entity.Shop">
 		update tb_shop
 		<set>

@@ -22,7 +22,10 @@ public class ShopDaoTest extends BaseTest {
     @Autowired
     private ShopDao shopDao;
 
+
+
     @Test
+    @Ignore
     public void testQueryShopListAndCount(){
         Shop shopCondition = new Shop();
         PersonInfo owner = new PersonInfo();
