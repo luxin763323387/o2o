@@ -1,0 +1,36 @@
+package com.cn.lx.enums;
+
+/**
+ * @author Steven Lu
+ * @date 2018/10/28 -1:03
+ */
+public enum ProductCategoryStateEnum {
+    SUCCESS(1,"操作成功"), INNER_ERROR(-1001, "操作失败"), EMPTY_LIST(-1002, "添加数少于1");
+
+    private int state;
+    private String stateInfo;
+
+    private ProductCategoryStateEnum(int state, String stateInfo) {
+        this.state = state;
+        this.stateInfo = stateInfo;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public String getStateInfo() {
+        return stateInfo;
+    }
+
+    public static ProductCategoryStateEnum stateof(int index){
+        for (ProductCategoryStateEnum state: values()){
+            if(state.getState() == index){
+                return state;
+            }
+        }
+        return null;
+    }
+}
+
+

@@ -22,11 +22,20 @@ public class ShopAdminController {
 
     @RequestMapping(value = "/shoplist")
     public String shopList(){
+        // 转发至店铺列表页面
         return "shop/shoplist";
     }
 
     @RequestMapping(value = "/shopmanagement")
     public String shopManagement(){
+        // 转发至店铺管理页面
         return "shop/shopmanagement";
     }
+
+    @RequestMapping(value = "/productcategorymanagement")
+    public String productCategoryManagement(){
+        // 转发到商品列表
+        return "shop/productcategorymanagement";
+    }
+
 }

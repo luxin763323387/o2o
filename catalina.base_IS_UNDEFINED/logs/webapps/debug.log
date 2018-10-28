@@ -1,12 +1,6 @@
-2018-10-27 22:22:50.324 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
-2018-10-27 22:22:50.394 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2018-10-27 22:22:50.414 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 0
-2018-10-27 22:23:11.996 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
-2018-10-27 22:23:12.040 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2018-10-27 22:23:12.059 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 0
-2018-10-27 22:25:54.504 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
-2018-10-27 22:25:54.560 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2018-10-27 22:25:54.577 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 0
-2018-10-27 22:26:03.039 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
-2018-10-27 22:26:03.076 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 24(Long)
-2018-10-27 22:26:03.102 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 3
+2018-10-28 01:25:25.687 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
+2018-10-28 01:25:25.745 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 24(Long)
+2018-10-28 01:25:25.765 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 3
+2018-10-28 01:25:36.018 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
+2018-10-28 01:25:36.054 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 24(Long)
+2018-10-28 01:25:36.079 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 3
