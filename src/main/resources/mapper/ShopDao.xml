@@ -73,7 +73,7 @@
 			s.shop_category_id = sc.shop_category_id
 		</where>
 		order by
-		priority desc
+		shop_id ASC
 		LIMIT #{rowIndex},#{pageSize};
 	</select>
 	<select id="queryShopCount" resultType="int">
