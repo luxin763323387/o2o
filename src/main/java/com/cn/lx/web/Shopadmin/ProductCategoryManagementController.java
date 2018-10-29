@@ -62,11 +62,11 @@ public class ProductCategoryManagementController {
      * @param productCategoryList
      * @return
      */
-    @RequestMapping(value = "/addproductcategorys", method = RequestMethod.GET)
+    @RequestMapping(value = "/addproductcategorys", method = RequestMethod.POST)
     @ResponseBody
     private Map<String, Object> addProductCategorys(@RequestBody List<ProductCategory> productCategoryList,
-                                                    HttpServletRequest request) {//自动接受前端传入productCategoryList
-        Map<String, Object> modelMap = new HashMap<>();
+                                                    HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
         for (ProductCategory pc : productCategoryList) {
             pc.setShopId(currentShop.getShopId());
@@ -80,15 +80,16 @@ public class ProductCategoryManagementController {
                     modelMap.put("success", false);
                     modelMap.put("errMsg", pe.getStateInfo());
                 }
-            }catch (ProductCategoryOperationException e){
-                modelMap.put("success",false);
-                modelMap.put("errMsg",e.toString());
+            } catch (ProductCategoryOperationException e) {
+                modelMap.put("success", false);
+                modelMap.put("errMsg", e.toString());
+                return modelMap;
             }
+
         } else {
             modelMap.put("success", false);
-            modelMap.put("errMsg", "请至少在输入一个");
+            modelMap.put("errMsg", "请至少输入一个商品类别");
         }
         return modelMap;
     }
-
 }
