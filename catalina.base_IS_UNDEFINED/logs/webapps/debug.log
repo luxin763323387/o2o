@@ -1,6 +1,7 @@
-2018-10-28 01:25:25.687 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
-2018-10-28 01:25:25.745 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 24(Long)
-2018-10-28 01:25:25.765 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 3
-2018-10-28 01:25:36.018 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? 
-2018-10-28 01:25:36.054 [main] DEBUG c.c.l.d.P.queryProductCategoryList - ==> Parameters: 24(Long)
-2018-10-28 01:25:36.079 [main] DEBUG c.c.l.d.P.queryProductCategoryList - <==      Total: 3
+2018-10-29 15:58:56.836 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ?, ) , ( ?, ?, ?, ?, ) 
+2018-10-29 16:02:17.174 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ?, ) , ( ?, ?, ?, ?, ) 
+2018-10-29 16:02:32.745 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ?, ) , ( ?, ?, ?, ?, ) 
+2018-10-29 16:02:32.787 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-10-29 16:02:32.304(Timestamp), 8(Long), 商品类别2(String), 2(Integer), 2018-10-29 16:02:32.304(Timestamp), 8(Long)
+2018-10-29 16:02:57.947 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2018-10-29 16:02:57.999 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-10-29 16:02:57.521(Timestamp), 8(Long), 商品类别2(String), 2(Integer), 2018-10-29 16:02:57.521(Timestamp), 8(Long)
+2018-10-29 16:02:58.068 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - <==    Updates: 2
