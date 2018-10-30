@@ -7,6 +7,7 @@ import com.cn.lx.entity.Shop;
 import com.cn.lx.enums.ProductCategoryStateEnum;
 import com.cn.lx.exceptions.ProductCategoryOperationException;
 import com.cn.lx.service.ProductCategoryService;
+import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -91,5 +92,31 @@ public class ProductCategoryManagementController {
             modelMap.put("errMsg", "请至少输入一个商品类别");
         }
         return modelMap;
+    }
+
+    @RequestMapping(value = "/removeproductcategory",method = RequestMethod.POST)
+    @ResponseBody
+    private Map<String,Object> removeproductcategory(Long productCategoryId, HttpServletRequest request){
+        Map<String,Object> modelMap = new HashMap<String,Object>();
+        if(productCategoryId != null && productCategoryId>0){
+            try {
+                Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+                ProductCategoryExecution pe = productCategoryService.deleteProductCategory(productCategoryId, currentShop.getShopId());
+                if (pe.getState() == ProductCategoryStateEnum.SUCCESS.getState()) {
+                    modelMap.put("success", true);
+                } else {
+                    modelMap.put("success", false);
+                    modelMap.put("errMsg", pe.getStateInfo());
+                }
+            }catch (ProductCategoryOperationException e){
+                modelMap.put("success",false);
+                modelMap.put("errMsg",e.toString());
+                return modelMap;
+            }
+        }else {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "请至少选择一个商品类别");
+        }
+    return modelMap;
     }
 }
