@@ -1,7 +1,6 @@
-2018-10-29 15:58:56.836 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ?, ) , ( ?, ?, ?, ?, ) 
-2018-10-29 16:02:17.174 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ?, ) , ( ?, ?, ?, ?, ) 
-2018-10-29 16:02:32.745 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ?, ) , ( ?, ?, ?, ?, ) 
-2018-10-29 16:02:32.787 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-10-29 16:02:32.304(Timestamp), 8(Long), 商品类别2(String), 2(Integer), 2018-10-29 16:02:32.304(Timestamp), 8(Long)
-2018-10-29 16:02:57.947 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
-2018-10-29 16:02:57.999 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-10-29 16:02:57.521(Timestamp), 8(Long), 商品类别2(String), 2(Integer), 2018-10-29 16:02:57.521(Timestamp), 8(Long)
-2018-10-29 16:02:58.068 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - <==    Updates: 2
+2018-10-30 13:26:40.175 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2018-10-30 13:26:40.236 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-10-30 13:26:39.331(Timestamp), 8(Long), 商品类别2(String), 2(Integer), 2018-10-30 13:26:39.331(Timestamp), 8(Long)
+2018-10-30 13:26:40.328 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - <==    Updates: 2
+2018-10-30 13:27:36.765 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name,priority,create_time,shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2018-10-30 13:27:36.808 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2018-10-30 13:27:36.222(Timestamp), 8(Long), 商品类别2(String), 2(Integer), 2018-10-30 13:27:36.222(Timestamp), 8(Long)
+2018-10-30 13:27:36.870 [main] DEBUG c.c.l.d.P.batchInsertProductCategory - <==    Updates: 2

@@ -6,6 +6,7 @@ import com.cn.lx.dto.ProductCategoryExecution;
 import com.cn.lx.entity.ProductCategory;
 import com.cn.lx.enums.ProductCategoryStateEnum;
 import com.cn.lx.exceptions.ProductCategoryException;
+import com.cn.lx.exceptions.ProductCategoryOperationException;
 import com.cn.lx.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,19 +31,21 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
 
     @Override
     @Transactional
-    public ProductCategoryExecution batchAddProductCategory(List<ProductCategory> productCategoryList) throws ProductCategoryException {
-        if(productCategoryList != null && productCategoryList.size() >0){
+    public ProductCategoryExecution batchAddProductCategory(List<ProductCategory> productCategoryList)
+            throws ProductCategoryOperationException {
+        if (productCategoryList != null && productCategoryList.size() > 0) {
             try {
                 int effectedNum = productCategoryDao.batchInsertProductCategory(productCategoryList);
                 if (effectedNum <= 0) {
-                    throw new ProductCategoryException("店铺类别创建失败");
+                    throw new ProductCategoryOperationException("店铺类别创建失败");
                 } else {
                     return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
                 }
-            }catch (Exception e){
-                throw new ProductCategoryException("batchAddProductCategory error" + e.getMessage());
+
+            } catch (Exception e) {
+                throw new ProductCategoryOperationException("batchAddProductCategory error: " + e.getMessage());
             }
-        }else {
+        } else {
             return new ProductCategoryExecution(ProductCategoryStateEnum.EMPTY_LIST);
         }
     }
