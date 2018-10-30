@@ -20,7 +20,11 @@
     </select>
     <insert id="batchInsertProductCategory" parameterType="java.util.List">
         INSERT INTO
-        tb_product_category(product_category_name,priority,create_time,shop_id)
+        tb_product_category
+        (product_category_name,
+        priority,
+        create_time,
+        shop_id)
         VALUES
         <foreach collection="list" item="productCategory" index="index" separator=",">
             (
@@ -31,4 +35,11 @@
             )
         </foreach>
     </insert>
+    <delete id="deleteProductCategory">
+        DELETE FROM
+        tb_product_category
+        WHERE
+        product_category_id = #{productCategoryId}
+        AND shop_id = #{shopId}
+    </delete>
 </mapper>
