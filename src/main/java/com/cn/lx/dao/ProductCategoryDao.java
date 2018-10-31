@@ -28,7 +28,7 @@ public interface ProductCategoryDao {
     int batchInsertProductCategory(List<ProductCategory> productCategoriesList);
 
     /**
-     * 批量删除商品类别
+     * 删除商品类别
      *
      * @param productCategoryId
      * @param shopId            必须shopId也要正确才能删除
