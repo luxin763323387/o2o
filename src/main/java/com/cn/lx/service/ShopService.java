@@ -1,5 +1,6 @@
 package com.cn.lx.service;
 
+import com.cn.lx.dto.ImageHolder;
 import com.cn.lx.dto.ShopExecution;
 import com.cn.lx.entity.Shop;
 import com.cn.lx.exceptions.ShopOperationException;
@@ -30,20 +31,18 @@ public interface ShopService {
     /**
      * 修改店铺信息，包括图片处理
      * @param shop
-     * @param shopImgInputStream
-     * @param fileName
+     * @param thumbnail
      * @return
      * @throws ShopOperationException
      */
-    ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName)throws ShopOperationException;
+    ShopExecution modifyShop(Shop shop, ImageHolder thumbnail)throws ShopOperationException;
 
     /**
      * 注册店铺信息，包括图片处理
      * @param shop
-     * @param shopImgInputStream
-     * @param fileName
+     * @param thumbnail
      * @return
      * @throws ShopOperationException
      */
-    ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName)throws ShopOperationException;
+    ShopExecution addShop(Shop shop,  ImageHolder thumbnail)throws ShopOperationException;
 }

@@ -1,6 +1,7 @@
 package com.cn.lx.web.Shopadmin;
 
 
+import com.cn.lx.dto.ImageHolder;
 import com.cn.lx.dto.ShopExecution;
 import com.cn.lx.entity.Area;
 import com.cn.lx.entity.PersonInfo;
@@ -192,7 +193,8 @@ public class ShopManagementController {
             shop.setOwner(owner);
             ShopExecution se;
             try {
-                se = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
+                se = shopService.addShop(shop,imageHolder);
                 if (se.getState() == ShopStateEnum.CHECK.getState()) {
                     modelMap.put("success", true);
                     //该用户可以操作的店铺列表
@@ -260,14 +262,15 @@ public class ShopManagementController {
         }
 
 
-        //2.修改店铺
+        // 2.修改店铺信息
         if (shop != null && shop.getShopId() != null) {
             ShopExecution se;
             try {
                 if (shopImg == null) {
-                    se = shopService.modifyShop(shop, null, null);
+                    se = shopService.modifyShop(shop, null);
                 } else {
-                    se = shopService.modifyShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                    ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(), shopImg.getInputStream());
+                    se = shopService.modifyShop(shop, imageHolder);
                 }
                 if (se.getState() == ShopStateEnum.SUCCESS.getState()) {
                     modelMap.put("success", true);
@@ -276,7 +279,6 @@ public class ShopManagementController {
                     modelMap.put("errMsg", se.getStateInfo());
                 }
             } catch (ShopOperationException e) {
-                e.printStackTrace();
                 modelMap.put("success", false);
                 modelMap.put("errMsg", e.getMessage());
             } catch (IOException e) {
@@ -290,6 +292,7 @@ public class ShopManagementController {
             return modelMap;
         }
     }
+
 
    /* private static void inputStreamToFile(InputStream ins, File file){
         FileOutputStream os = null;

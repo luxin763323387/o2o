@@ -2,7 +2,6 @@ package com.cn.lx.service;
 
 import com.cn.lx.dto.ProductCategoryExecution;
 import com.cn.lx.entity.ProductCategory;
-import com.cn.lx.exceptions.ProductCategoryException;
 import com.cn.lx.exceptions.ProductCategoryOperationException;
 import com.mysql.jdbc.PacketTooBigException;
 

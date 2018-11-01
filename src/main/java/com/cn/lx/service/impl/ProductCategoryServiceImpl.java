@@ -1,11 +1,9 @@
 package com.cn.lx.service.impl;
 
 import com.cn.lx.dao.ProductCategoryDao;
-import com.cn.lx.dao.ShopCategoryDao;
 import com.cn.lx.dto.ProductCategoryExecution;
 import com.cn.lx.entity.ProductCategory;
 import com.cn.lx.enums.ProductCategoryStateEnum;
-import com.cn.lx.exceptions.ProductCategoryException;
 import com.cn.lx.exceptions.ProductCategoryOperationException;
 import com.cn.lx.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,7 @@
 package com.cn.lx.service;
 
 import com.cn.lx.BaseTest;
+import com.cn.lx.dto.ImageHolder;
 import com.cn.lx.dto.ShopExecution;
 import com.cn.lx.entity.Area;
 import com.cn.lx.entity.PersonInfo;
@@ -41,14 +42,15 @@ public class ShopServiceTest extends BaseTest {
     }
 
     @Test
-    @Ignore
+
     public void testModifyShop()throws ShopOperationException,FileNotFoundException{
         Shop shop = new Shop();
-        shop.setShopId(28L);
+        shop.setShopId(29L);
         shop.setShopName("修改的店铺名字");
         File shopImg = new File("D:/Image/laop2.jpeg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution shopExecution=shopService.modifyShop(shop,is,"laop2.jpeg");
+        ImageHolder imageHolder = new ImageHolder("laop2.jpeg",is);
+        ShopExecution shopExecution=shopService.modifyShop(shop,imageHolder);
         System.out.println(shopExecution.getShop().getShopImg());
     }
 
@@ -74,7 +76,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setAdvice("审核中");
         File shopImg = new File("D:/Image/naicha.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution se = shopService.addShop(shop, is,shopImg.getName());
+        ImageHolder imageHolder = new ImageHolder(shopImg.getName(),is);
+        ShopExecution se = shopService.addShop(shop, imageHolder);
         assertEquals(ShopStateEnum.CHECK.getState(),se.getState());
     }
 

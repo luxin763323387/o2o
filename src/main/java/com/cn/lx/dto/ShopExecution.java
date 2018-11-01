@@ -42,7 +42,7 @@ public class ShopExecution {
         this.shop = shop;
     }
 
-    // 店铺操作成功的时候使用的构造器
+    // 店铺列表操作成功的时候使用的构造器
     public ShopExecution(ShopStateEnum stateEnum,List<Shop> shop){
         this.state = stateEnum.getState();
         this.stateInfo = stateEnum.getStateInfo();
