@@ -117,6 +117,11 @@ public class ShopServiceImpl implements ShopService {
         return new ShopExecution(ShopStateEnum.CHECK,shop);
 }
 
+    /**
+     * 添加店铺缩略图
+     * @param shop
+     * @param thumbnail
+     */
     private void addShopImg(Shop shop, ImageHolder thumbnail) {
         //获取shop图片目录的相对值路径
         String dest = PathUtil.getShopImagePath(shop.getShopId());

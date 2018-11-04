@@ -79,6 +79,7 @@ public class ShopServiceTest extends BaseTest {
         ImageHolder imageHolder = new ImageHolder(shopImg.getName(),is);
         ShopExecution se = shopService.addShop(shop, imageHolder);
         assertEquals(ShopStateEnum.CHECK.getState(),se.getState());
+
     }
 
 }

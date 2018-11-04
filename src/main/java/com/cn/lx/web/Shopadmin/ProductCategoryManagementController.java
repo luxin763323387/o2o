@@ -27,7 +27,7 @@ import java.util.Map;
  * @date 2018/10/27 -23:05
  */
 @Controller
-@RequestMapping(value = "shopadmin")
+@RequestMapping(value = "/shopadmin")
 public class ProductCategoryManagementController {
     @Autowired
     private ProductCategoryService productCategoryService;

@@ -156,9 +156,9 @@ public class ShopManagementController {
         /**
          * 获取前端的信息转换成实体类
          */
-        String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
         ObjectMapper mapper = new ObjectMapper();
         Shop shop = null;
+        String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
         try {
             shop = mapper.readValue(shopStr, Shop.class);
         } catch (Exception e) {

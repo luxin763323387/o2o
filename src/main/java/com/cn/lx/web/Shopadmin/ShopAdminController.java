@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * 主要用来解析路由并转发到相应的html中
  */
+
 public class ShopAdminController {
     @RequestMapping(value = "/shopoperation")
     public String shopOperation() {
@@ -36,6 +37,12 @@ public class ShopAdminController {
     public String productCategoryManagement(){
         // 转发到商品列表
         return "shop/productcategorymanagement";
+    }
+
+    @RequestMapping(value = "/productoperation")
+    public String productManagement(){
+        // 转发到商品添加&编辑
+        return "shop/productoperation";
     }
 
 }
