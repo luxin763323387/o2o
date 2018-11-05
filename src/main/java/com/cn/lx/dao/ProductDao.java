@@ -13,4 +13,20 @@ public interface ProductDao {
      * @return
      */
     int insertProduct (Product product);
+
+    /**
+     * 通过productId查询你
+     * @param productId
+     * @return
+     */
+    Product queryProductId(Long productId);
+
+    /**
+     * 更新商品
+     * @param product
+     * @return
+     */
+    int updateProduct(Product product);
+
+
 }

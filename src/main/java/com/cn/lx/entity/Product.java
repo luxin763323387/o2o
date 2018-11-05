@@ -33,9 +33,9 @@ public class Product {
 
     //图片详情列表，跟商品是多对一关系
     private List<ProductImg> productImgList;
-    //商品类别，意见商品仅属于一个商品列表
+    //商品类别，意见商品仅属于一个商品列表(一对一)
     private ProductCategory productCategory;
-    //商铺实体类，标明属于哪个店铺
+    //商铺实体类，标明属于哪个店铺(一对一)
     private Shop shop;
 
     public Long getProductId() {

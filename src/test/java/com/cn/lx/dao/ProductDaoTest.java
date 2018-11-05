@@ -3,13 +3,17 @@ package com.cn.lx.dao;
 import com.cn.lx.BaseTest;
 import com.cn.lx.entity.Product;
 import com.cn.lx.entity.ProductCategory;
+import com.cn.lx.entity.ProductImg;
 import com.cn.lx.entity.Shop;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -22,6 +26,9 @@ import static org.junit.Assert.assertEquals;
 public class ProductDaoTest extends BaseTest {
     @Autowired
     private ProductDao productDao;
+    @Autowired
+    private ProductImgDao productImgDao;
+
 
     @Test
     public void testAInsertProduct(){
@@ -69,4 +76,47 @@ public class ProductDaoTest extends BaseTest {
         int effectedNum3 = productDao.insertProduct(product3);
         assertEquals(1,effectedNum3);
     }
+
+    @Test
+    public void testCQueryByProductId() throws Exception{
+        long productId = 1L;
+        ProductImg productImg1 = new ProductImg();
+        productImg1.setImgAddr("图片1");
+        productImg1.setImgDesc("测试图片1");
+        productImg1.setPriority(1);
+        productImg1.setCreateTime(new Date());
+        productImg1.setProductId(productId);
+        ProductImg productImg2 = new ProductImg();
+        productImg2.setImgAddr("图片2");
+        productImg2.setImgDesc("测试图片2");
+        productImg2.setPriority(1);
+        productImg2.setCreateTime(new Date());
+        productImg2.setProductId(productId);
+        List<ProductImg> productImgList = new ArrayList<>();
+        productImgList.add(productImg1);
+        productImgList.add(productImg2);
+        int effectNum = productImgDao.batchInsertProductImg(productImgList);
+        assertEquals(2,effectNum);
+        Product product = productDao.queryProductId(productId);
+        assertEquals(2,product.getProductImgList().size());
+        effectNum = productImgDao.deleteProductImgByProductId(productId);
+        assertEquals(2,effectNum);
+    }
+
+    @Test
+
+    public void TestDUpdateProduct() throws Exception{
+        Product product = new Product();
+        ProductCategory pc = new ProductCategory();
+        Shop shop = new Shop();
+        shop.setShopId(5L);
+        pc.setProductCategoryId(16L);
+        product.setProductId(3L);
+        product.setShop(shop);
+        product.setProductName("第二个产品2");
+        product.setProductCategory(pc);
+        int effectedNum = productDao.updateProduct(product);
+        assertEquals(1,effectedNum);
+    }
+
 }
