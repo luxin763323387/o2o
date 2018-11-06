@@ -1,6 +1,11 @@
 package com.cn.lx.dao;
 
+import com.cn.lx.dto.ImageHolder;
+import com.cn.lx.dto.ProductExecution;
 import com.cn.lx.entity.Product;
+import com.cn.lx.exceptions.ProductOperationException;
+
+import java.util.List;
 
 /**
  * @author Steven Lu
@@ -19,7 +24,7 @@ public interface ProductDao {
      * @param productId
      * @return
      */
-    Product queryProductId(Long productId);
+    Product queryProductById(long productId);
 
     /**
      * 更新商品

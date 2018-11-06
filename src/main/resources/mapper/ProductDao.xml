@@ -47,7 +47,7 @@
 		(#{productName},#{productDesc},#{imgAddr},#{normalPrice},#{promotionPrice},#{priority},#{createTime},
 		#{lastEditTime},#{enableStatus},#{productCategory.productCategoryId},#{shop.shopId})
     </insert>
-	<select id="queryProductId" resultMap="productMap" parameterType="Long">
+	<select id="queryProductById" resultMap="productMap" parameterType="Long">
 		<!-- 具体的sql -->
 		SELECT
 		p.product_id,

@@ -70,6 +70,20 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+
+    @Override
+    /**
+     * 返回ProductId进行查询
+     */
+    public Product getProductById(long productId) {
+        return productDao.queryProductById(productId);
+    }
+
+    @Override
+    public ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImgHolderList) throws ProductOperationException {
+        return null;
+    }
+
     /**
      * 添加缩略图
      *

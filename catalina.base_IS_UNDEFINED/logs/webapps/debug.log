@@ -229,3 +229,12 @@
 2018-11-05 19:32:18.895 [main] DEBUG com.cn.lx.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
 2018-11-05 19:32:18.966 [main] DEBUG com.cn.lx.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品2(String), 16(Long), 3(Long), 5(Long)
 2018-11-05 19:32:19.036 [main] DEBUG com.cn.lx.dao.ProductDao.updateProduct - <==    Updates: 1
+2018-11-05 23:49:57.750 [main] DEBUG com.cn.lx.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?, ?, ?, ?, ?) , (?, ?, ?, ?, ?) 
+2018-11-05 23:49:57.850 [main] DEBUG com.cn.lx.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-11-05 23:49:57.105(Timestamp), 1(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-11-05 23:49:57.105(Timestamp), 1(Long)
+2018-11-05 23:49:57.880 [main] DEBUG com.cn.lx.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2018-11-05 23:49:57.893 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr as detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2018-11-05 23:49:57.894 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
+2018-11-05 23:49:57.913 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductById - <==      Total: 2
+2018-11-05 23:49:57.922 [main] DEBUG c.c.l.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2018-11-05 23:49:57.922 [main] DEBUG c.c.l.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 1(Long)
+2018-11-05 23:49:57.994 [main] DEBUG c.c.l.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
