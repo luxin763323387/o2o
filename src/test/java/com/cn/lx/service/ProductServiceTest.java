@@ -82,7 +82,7 @@ public class ProductServiceTest extends BaseTest {
         product.setProductName("测试商品1");
         product.setProductDesc("测试商品1");
         //创建缩略图文件流
-        File thumbnailFile = new File("D:/Image/naicha.jpg");
+        File thumbnailFile = new File("D:/Image/laop2.jpeg");
         InputStream is = new FileInputStream(thumbnailFile);
         ImageHolder thumbnail = new ImageHolder(thumbnailFile.getName(),is);
         //创建两个商品详情图文件流并将他们的添加到详情图列表中

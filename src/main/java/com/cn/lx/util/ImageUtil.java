@@ -100,7 +100,7 @@ public class ImageUtil {
         // 调用Thumbnails生成带有水印的图片
         try {
             Thumbnails.of(thumbnail.getImage()).size(337, 640)
-                    .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File("D:/Image/watermark.jpg")), 0.25f)
+                    .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath+"/watermark.jpg")), 0.25f)
                     .outputQuality(0.9f).toFile(dest);
         } catch (IOException e) {
             logger.error(e.toString());
@@ -151,14 +151,14 @@ public class ImageUtil {
         }
     }
     /**
-     * storePath是文件的路径还是目录的路径，
-     * 如果storePath是文件路径则删除该文件，
+     * storePath是文件的路径还是目录的路径， 如果storePath是文件路径则删除该文件，
      * 如果storePath是目录路径则删除该目录下的所有文件
+     *
      * @param storePath
      */
-    public static void deleteFileOrPath(String storePath){
+    public static void deleteFileOrPath(String storePath) {
         File fileOrPath = new File(PathUtil.getImgBasePath() + storePath);
-        if(fileOrPath.exists()) {
+        if (fileOrPath.exists()) {
             if (fileOrPath.isDirectory()) {
                 File files[] = fileOrPath.listFiles();
                 for (int i = 0; i < files.length; i++) {
