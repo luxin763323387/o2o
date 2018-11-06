@@ -22,4 +22,18 @@
         WHERE
         product_id=#{productId}
     </delete>
+    <select id="queryProductImgList" resultType="com.cn.lx.entity.ProductImg">
+        SELECT
+		product_img_id,
+		img_addr,
+		img_desc,
+		priority,
+		create_time,
+		product_id
+		FROM tb_product_img
+		WHERE
+		product_img_id =#{prductImgId}
+	    ORDER BY
+	    product_img_id ASC
+    </select>
 </mapper>
