@@ -39,10 +39,14 @@ public class ProductExecution {
     }
 
     //商品列表操作成功时使用的构造器
-    public ProductExecution(ProductStateEnum stateEnum,List<Product> products){
+    public ProductExecution(ProductStateEnum stateEnum, List<Product> productList) {
         this.state = stateEnum.getState();
         this.stateInfo = stateEnum.getStateInfo();
         this.productList = productList;
+    }
+
+    public ProductExecution() {
+
     }
 
     public int getState() {

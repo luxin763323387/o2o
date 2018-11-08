@@ -33,6 +33,15 @@ public interface ProductService {
     Product getProductById(long productId);
 
     /**
+     * 查询列表并分页，通过店铺查询/商品类别查询/商品名(模糊)/状态查询
+     * @param productCondition
+     * @param pageIndex
+     * @param pageSize
+     * @return
+     */
+    ProductExecution getProductList(Product productCondition,int pageIndex, int pageSize);
+
+    /**
      * 修改店铺信息，缩略图及详情图
      * @param product
      * @param thumbnail
@@ -42,4 +51,4 @@ public interface ProductService {
      */
     ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImgHolderList)
         throws ProductOperationException;
-}
+        }

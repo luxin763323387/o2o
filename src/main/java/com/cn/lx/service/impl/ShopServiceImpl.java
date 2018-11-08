@@ -31,7 +31,7 @@ public class ShopServiceImpl implements ShopService {
     @Override
     public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize) {
         //将页码转换成行码
-        int rowIndex = PageCalculator.calcuateRowIndex(pageIndex,pageSize);
+        int rowIndex = PageCalculator.calculateRowIndex(pageIndex,pageSize);
         //根据条件查询，调用店铺相关的列表
         List<Shop> shopList = shopDao.queryShopList(shopCondition,rowIndex,pageSize);
         //根据相同的条件查询，返回店铺的总数

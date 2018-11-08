@@ -44,6 +44,52 @@ public class ProductManagementController {
     //支持上传商品详情图的最大数量
     private static final int IMAGEMAXCOUNT = 6;
 
+    @RequestMapping(value = "/getproductlistbyshop" ,method = RequestMethod.GET)
+    @ResponseBody
+    private Map<String,Object> getproductListByShop(HttpServletRequest request){
+        Map<String,Object> modelMap = new HashMap<>();
+        //获取前台传过来的页码
+        int pageIndex = HttpServletRequestUtil.getInt(request,"pageIndex");
+        //获取前台每页展示商品的数量上限
+        int pageSize = HttpServletRequestUtil.getInt(request,"pageSize");
+        //获取session中的店铺Id
+        Shop currentShop  = (Shop) request.getSession().getAttribute("currentShop");
+        if((pageIndex > -1) && (pageSize > -1) && (currentShop != null) && (currentShop.getShopId() != null)){
+            // 获取传入的需要检索的条件，包括是否需要从某个商品类别以及模糊查找商品名去筛选某个店铺下的商品列表
+            // 筛选的条件可以进行排列组合
+            long productCategoryId = HttpServletRequestUtil.getInt(request,"productCategoryId");
+            String productCategoryName = HttpServletRequestUtil.getString(request,"productName");
+            Product productCondition = compactProductCondition(currentShop.getShopId(),productCategoryId,productCategoryName);
+            //传入查询条件进行分页查询，返回相应商品列表以及总数
+            ProductExecution pe = productService.getProductList(productCondition,pageIndex,pageSize);
+            modelMap.put("productList",pe.getProductList());
+            modelMap.put("count",pe.getCount());
+            modelMap.put("success",toString());
+        }else {
+            modelMap.put("success",false);
+            modelMap.put("errMsg","empty pageSize or pageIndex or shopId");
+        }
+        return modelMap;
+    }
+
+    private Product compactProductCondition(Long shopId, long productCategoryId, String productCategoryName) {
+        Product productCondition = new Product();
+        Shop shop = new Shop();
+        shop.setShopId(shopId);
+        productCondition.setShop(shop);
+        //若有指定类别则添加进去
+        if(productCategoryId >-1){
+            ProductCategory productCategory = new ProductCategory();
+            productCategory.setProductCategoryId(productCategoryId);
+            productCondition.setProductCategory(productCategory);
+        }
+        //若有商品名模糊的则添加
+        if(productCategoryName != null){
+            productCondition.setProductName(productCategoryName);
+        }
+        return productCondition;
+    }
+
     /**
      * 通过商品Id查询
      * @param productId

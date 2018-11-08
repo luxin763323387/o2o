@@ -1,55 +1,12 @@
-2018-11-07 17:09:34.578 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, point, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 17:09:34.615 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 17:10:04.468 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, point, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 17:10:04.529 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 17:10:20.971 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 17:10:21.009 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 17:10:21.097 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-07 17:10:55.586 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 17:10:55.635 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 17:10:55.655 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-07 17:14:54.298 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 17:14:54.334 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 17:14:54.354 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-07 17:14:54.364 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM TB_product 
-2018-11-07 17:14:54.364 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-07 17:14:54.366 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-11-07 17:15:37.258 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 17:15:37.293 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 17:15:37.318 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-07 17:15:37.329 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM TB_product 
-2018-11-07 17:15:37.330 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-07 17:15:37.332 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-11-07 21:00:00.241 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 21:00:00.290 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 21:00:00.313 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-07 21:00:00.320 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM TB_product 
-2018-11-07 21:00:00.320 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-07 21:00:00.322 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-11-07 21:00:00.325 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 21:00:00.325 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 21:00:00.336 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 1
-2018-11-07 21:00:35.356 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 21:00:35.405 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 21:00:35.430 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-07 21:00:35.437 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM TB_product 
-2018-11-07 21:00:35.437 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-07 21:00:35.438 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-11-07 21:00:35.441 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 21:00:35.442 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 21:00:35.445 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 1
-2018-11-07 21:00:35.445 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM TB_product WHERE product_name like '%测试%' 
-2018-11-07 21:00:35.446 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-07 21:00:35.448 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-11-07 21:00:52.569 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 21:00:52.623 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 21:00:52.645 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-07 21:00:52.652 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM TB_product 
-2018-11-07 21:00:52.653 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-07 21:00:52.654 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-11-07 21:00:52.657 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2018-11-07 21:00:52.657 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-07 21:00:52.660 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 1
-2018-11-07 21:00:52.661 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM TB_product WHERE product_name like '%测试%' 
-2018-11-07 21:00:52.662 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-07 21:00:52.664 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
+2018-11-08 15:36:18.629 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2018-11-08 15:36:18.679 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2018-11-08 15:36:18.701 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
+2018-11-08 15:36:18.712 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
+2018-11-08 15:36:18.712 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
+2018-11-08 15:36:18.714 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
+2018-11-08 15:36:18.717 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
+2018-11-08 15:36:18.718 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2018-11-08 15:36:18.721 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 1
+2018-11-08 15:36:18.724 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
+2018-11-08 15:36:18.724 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
+2018-11-08 15:36:18.725 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1

@@ -10,6 +10,7 @@ import com.cn.lx.enums.ProductStateEnum;
 import com.cn.lx.exceptions.ProductOperationException;
 import com.cn.lx.service.ProductService;
 import com.cn.lx.util.ImageUtil;
+import com.cn.lx.util.PageCalculator;
 import com.cn.lx.util.PathUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -77,6 +78,19 @@ public class ProductServiceImpl implements ProductService {
      */
     public Product getProductById(long productId) {
         return productDao.queryProductById(productId);
+    }
+
+    @Override
+    public ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize) {
+        //页码转换成数据库行数，调用dao层返回指定行数的商品列表
+        int rowIndex = PageCalculator.calculateRowIndex(pageIndex,pageSize);
+        List<Product> productList = productDao.queryProductList(productCondition,rowIndex,pageSize);
+        //基于同样的发查询条件返回满足条件的总数
+        int count = productDao.queryProductCount(productCondition);
+        ProductExecution pe = new ProductExecution();
+        pe.setProductList(productList);
+        pe.setCount(count);
+        return pe ;
     }
 
     @Override
@@ -171,13 +185,13 @@ public class ProductServiceImpl implements ProductService {
 
 
     private void deleteProductImgList(Long productId) {
-        //更具productId查询原来的图片
+        //根据productId查询原来的图片
         List<ProductImg> productImgList = productImgDao.queryProductImgList(productId);
         //遍历后删除列表中的图片
         for(ProductImg productImg : productImgList){
             ImageUtil.deleteFileOrPath(productImg.getImgAddr());
         }
-        //清除数据库中的图片星系
+        //清除数据库中的图片信息
         productImgDao.deleteProductImgByProductId(productId);
     }
 }

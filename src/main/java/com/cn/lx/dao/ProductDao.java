@@ -40,10 +40,10 @@ public interface ProductDao {
 
     /**
      * 返回queryProductList的总数
-     * @param product
+     * @param productCondition
      * @return
      */
-    int queryProductCount(@Param("productCondition")Product product);
+    int queryProductCount(@Param("productCondition")Product productCondition);
     /**
      * 更新商品
      * @param product

@@ -5,7 +5,7 @@ package com.cn.lx.util;
  * @date 2018/10/26 -16:48
  */
 public class PageCalculator {
-    public static int calcuateRowIndex(int pageIndex,int pageSize){
+    public static int calculateRowIndex(int pageIndex,int pageSize){
 
         /**
          * 当pageIndex = 1,那么就是 （1-1）*pageSize （第一页）从0开始5条 （0-4）
