@@ -1,12 +1,19 @@
-2018-11-08 15:36:18.629 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2018-11-08 15:36:18.679 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-08 15:36:18.701 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 3
-2018-11-08 15:36:18.712 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2018-11-08 15:36:18.712 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-08 15:36:18.714 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
-2018-11-08 15:36:18.717 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2018-11-08 15:36:18.718 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2018-11-08 15:36:18.721 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductList - <==      Total: 1
-2018-11-08 15:36:18.724 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
-2018-11-08 15:36:18.724 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - ==> Parameters: 
-2018-11-08 15:36:18.725 [main] DEBUG com.cn.lx.dao.ProductDao.queryProductCount - <==      Total: 1
+2018-11-09 14:15:46.316 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tp_productCategory SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
+2018-11-09 14:15:46.378 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 18(Long), 18(Long)
+2018-11-09 14:16:14.186 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_productCategory SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
+2018-11-09 14:16:14.225 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 18(Long), 18(Long)
+2018-11-09 14:17:15.265 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
+2018-11-09 14:17:15.304 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 18(Long), 18(Long)
+2018-11-09 14:17:15.307 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 0
+2018-11-09 14:19:51.891 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
+2018-11-09 14:19:51.938 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 19(Long), 19(Long)
+2018-11-09 14:19:51.940 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 0
+2018-11-09 14:21:30.720 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
+2018-11-09 14:21:30.774 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 2(Long), 2(Long)
+2018-11-09 14:21:30.779 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 0
+2018-11-09 14:26:21.376 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_category_id =? 
+2018-11-09 14:26:21.439 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 19(Long)
+2018-11-09 14:26:21.515 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 1
+2018-11-09 14:34:37.926 [main] DEBUG c.cn.lx.dao.ProductDao.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_category_id =? 
+2018-11-09 14:34:37.961 [main] DEBUG c.cn.lx.dao.ProductDao.updateProductCategoryToNull - ==> Parameters: 19(Long)
+2018-11-09 14:34:37.963 [main] DEBUG c.cn.lx.dao.ProductDao.updateProductCategoryToNull - <==    Updates: 0

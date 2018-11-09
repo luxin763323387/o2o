@@ -17,7 +17,10 @@ import static org.junit.Assert.assertEquals;
  * @date 2018/10/27 -22:12
  */
 public class ProductCategoryDaoTest extends BaseTest {
-    @Autowired ProductCategoryDao productCategoryDao;
+    @Autowired
+    ProductCategoryDao productCategoryDao;
+    @Autowired
+    ProductDao productDao;
 
     @Test
     @Ignore
@@ -48,6 +51,13 @@ public class ProductCategoryDaoTest extends BaseTest {
     }
 
     @Test
+    public void testUpdateProductCategoryToNull(){
+        int effectedNum = productDao.updateProductCategoryToNull(19L);
+        assertEquals(1,effectedNum);
+    }
+
+    @Test
+    @Ignore
     public void testDeleteProductCategory() throws Exception {
         long shopId = 24;
         List<ProductCategory> productCategoryList = productCategoryDao.queryProductCategoryList(shopId);
