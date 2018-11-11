@@ -1,28 +1,9 @@
-2018-11-09 14:15:46.316 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tp_productCategory SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
-2018-11-09 14:15:46.378 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 18(Long), 18(Long)
-2018-11-09 14:16:14.186 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_productCategory SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
-2018-11-09 14:16:14.225 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 18(Long), 18(Long)
-2018-11-09 14:17:15.265 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
-2018-11-09 14:17:15.304 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 18(Long), 18(Long)
-2018-11-09 14:17:15.307 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 0
-2018-11-09 14:19:51.891 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
-2018-11-09 14:19:51.938 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 19(Long), 19(Long)
-2018-11-09 14:19:51.940 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 0
-2018-11-09 14:21:30.720 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_id = ? AND shop_id = ? 
-2018-11-09 14:21:30.774 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 2(Long), 2(Long)
-2018-11-09 14:21:30.779 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 0
-2018-11-09 14:26:21.376 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_category_id =? 
-2018-11-09 14:26:21.439 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - ==> Parameters: 19(Long)
-2018-11-09 14:26:21.515 [main] DEBUG c.c.l.d.P.updateProductCategoryToNull - <==    Updates: 1
-2018-11-09 14:34:37.926 [main] DEBUG c.cn.lx.dao.ProductDao.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_category_id =? 
-2018-11-09 14:34:37.961 [main] DEBUG c.cn.lx.dao.ProductDao.updateProductCategoryToNull - ==> Parameters: 19(Long)
-2018-11-09 14:34:37.963 [main] DEBUG c.cn.lx.dao.ProductDao.updateProductCategoryToNull - <==    Updates: 0
-2018-11-09 15:32:48.599 [main] DEBUG com.cn.lx.dao.HeadLineDao.queryHeadLineList - ==>  Preparing: SELECT line_id, line_name, line_link, line_img, priority, enable_status, create_time, last_edit_time FROM tb_head_line ORDER BY priority DESC 
-2018-11-09 15:32:48.665 [main] DEBUG com.cn.lx.dao.HeadLineDao.queryHeadLineList - ==> Parameters: 
-2018-11-09 15:32:48.683 [main] DEBUG com.cn.lx.dao.HeadLineDao.queryHeadLineList - <==      Total: 1
-2018-11-09 15:45:44.348 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority desc 
-2018-11-09 15:45:44.395 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-11-09 15:45:44.470 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
-2018-11-09 16:36:25.170 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority desc 
-2018-11-09 16:36:25.240 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
-2018-11-09 16:36:25.274 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2018-11-11 16:34:36.601 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority desc 
+2018-11-11 16:34:36.677 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2018-11-11 16:34:36.696 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
+2018-11-11 16:34:36.707 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is not null and parent_id =? ORDER BY priority desc 
+2018-11-11 16:34:36.708 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 1(Long)
+2018-11-11 16:34:36.711 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
+2018-11-11 16:35:32.376 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority desc 
+2018-11-11 16:35:32.428 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2018-11-11 16:35:32.452 [main] DEBUG com.cn.lx.dao.ShopCategoryDao.queryShopCategory - <==      Total: 3
