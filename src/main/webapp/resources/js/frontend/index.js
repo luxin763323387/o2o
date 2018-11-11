@@ -18,7 +18,7 @@ $(function () {
             //将轮播图组赋值给前端HTML控件
             $('.swiper-wrapper').html(swiperHtml);
             //设定轮播图转换时间为3秒
-            $('.swiper-wrapper').swiper({
+            $('.swiper-container').swiper({
                 autoplay : 3000,
                 //用户对轮播图进行操作时，是否自动停止autoplay
                 autoplayDisableOnInteraction : false
