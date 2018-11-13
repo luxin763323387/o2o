@@ -36,7 +36,7 @@ public class ShopDaoTest extends BaseTest {
         childCategory.setParent(parentCategory);
         shopCondition.setShopCategory(childCategory);
         //shopCondition.setOwner(owner);
-        List<Shop> shopList = shopDao.queryShopList(shopCondition,0,5);
+        List<Shop> shopList = shopDao.queryShopList(shopCondition,0,99);
         int count = shopDao.queryShopCount(shopCondition);
         System.out.println("店铺列表大小:"+shopList.size());
         System.out.println("店铺总数:"+count);
