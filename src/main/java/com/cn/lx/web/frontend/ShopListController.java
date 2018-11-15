@@ -90,19 +90,15 @@ public class ShopListController {
 	@ResponseBody
 	private Map<String, Object> listShops(HttpServletRequest request) {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
-		// 获取页码
+		// 获取页码，数据条数
 		int pageIndex = HttpServletRequestUtil.getInt(request, "pageIndex");
-		// 获取一页需要显示的数据条数
 		int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
 		// 非空判断
 		if ((pageIndex > -1) && (pageSize > -1)) {
-			// 试着获取一级类别Id
+			// 试着获取一级类别Id，二级类别Id，区域Id，模糊查询的名字
 			long parentId = HttpServletRequestUtil.getLong(request, "parentId");
-			// 试着获取特定二级类别Id
 			long shopCategoryId = HttpServletRequestUtil.getLong(request, "shopCategoryId");
-			// 试着获取区域Id
 			int areaId = HttpServletRequestUtil.getInt(request, "areaId");
-			// 试着获取模糊查询的名字
 			String shopName = HttpServletRequestUtil.getString(request, "shopName");
 			// 获取组合之后的查询条件
 			Shop shopCondition = compactShopCondition4Search(parentId, shopCategoryId, areaId, shopName);
