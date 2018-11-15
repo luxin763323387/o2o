@@ -23,8 +23,15 @@ public class FrontendController {
         return "frontend/shoplist";
     }
 
+    //显示店铺详情图
     @RequestMapping(value = "/shopdetail",method = RequestMethod.GET)
     private String showShopDetail(){
         return "frontend/shopdetail";
+    }
+
+    //显示商品详情图
+    @RequestMapping(value = "/productdetail",method = RequestMethod.GET)
+    private String showProductDetail(){
+        return "frontend/productdetail";
     }
 }
