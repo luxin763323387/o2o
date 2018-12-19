@@ -31,7 +31,7 @@ public class AreaController {
     @RequestMapping(value = "/listarea", method = RequestMethod.GET)
     @ResponseBody
 
-    private Map<String, Object> listArea() {
+    private Map<String, Object> listArea(){
         logger.info("===start===");
         Map<String, Object> modelMap = new HashMap<String, Object>();
         List<Area> list = new ArrayList<Area>();
